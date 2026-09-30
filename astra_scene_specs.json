@@ -1,0 +1,289 @@
+{
+  "model": "gpt-6-astra",
+  "generated_utc": "2026-09-23T10:23:11.303303+00:00",
+  "datasets": {
+    "eval_structure": {
+      "dataset": "eval_structure",
+      "model": "gpt-6-astra",
+      "response_id": "resp_0ec5b23db572b381016ab3a85470fc87d2b675f526a7e39486",
+      "raw_text": "{\"environment\":\"flat\",\"landmarks\":\"sheep\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[-3,4,0],\"yaw\":-0.64,\"pitch\":0}},\"notes\":[\"Flat grassy terrain matches both views; sheep are visible in the distance. Bravo starts a few blocks ahead and left of Alpha, facing back toward Alpha in the shared build area.\"]}",
+      "spec": {
+        "folder": "structureEval",
+        "label": "结构建造",
+        "category": "建筑",
+        "environment": "flat",
+        "instruction": "按双人动作序列移动、转动视角；Bravo 执行放置方块，方块留在共享世界中。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              -3.0,
+              4.0,
+              0.0
+            ],
+            "yaw": -0.64,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "sheep",
+        "seed": 41,
+        "astra_notes": [
+          "Flat grassy terrain matches both views; sheep are visible in the distance. Bravo starts a few blocks ahead and left of Alpha, facing back toward Alpha in the shared build area."
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:27.967734+00:00"
+    },
+    "eval_translation": {
+      "dataset": "eval_translation",
+      "model": "gpt-6-astra",
+      "response_id": "resp_0dcf585435fe04f3016ab3a850d13c87d0bba6ebf98f443a28",
+      "raw_text": "{\"environment\":\"flat\",\"landmarks\":\"distant_animals\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[0,12,0],\"yaw\":3.1416,\"pitch\":0}},\"notes\":[\"Flat grassy terrain matches both views and the unobstructed horizon.\",\"Bravo is placed several blocks ahead of Alpha and faces back toward Alpha.\",\"Small distant animals on the right match the sparse background landmarks.\"]}",
+      "spec": {
+        "folder": "translationEval",
+        "label": "平移运动",
+        "category": "移动",
+        "environment": "flat",
+        "instruction": "Alpha 按 left/right 动作横向平移；Bravo 保持原位，朝向与场景物体保持一致。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              0.0,
+              12.0,
+              0.0
+            ],
+            "yaw": 3.1416,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "distant_animals",
+        "seed": 42,
+        "astra_notes": [
+          "Flat grassy terrain matches both views and the unobstructed horizon.",
+          "Bravo is placed several blocks ahead of Alpha and faces back toward Alpha.",
+          "Small distant animals on the right match the sparse background landmarks."
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:26.900525+00:00"
+    },
+    "eval_rotation": {
+      "dataset": "eval_rotation",
+      "model": "gpt-6-astra",
+      "response_id": "resp_06414f7d82b1fb8c016ab3a8536e2487d2a2be2db8345b7157",
+      "raw_text": "{\"environment\":\"village\",\"landmarks\":\"village_behind\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[0,10,0],\"yaw\":3.1416,\"pitch\":0}},\"notes\":[\"Alpha faces Bravo across a flat grassy field; a small distant village lies behind Alpha from Bravo’s viewpoint and remains visible to Bravo while Alpha rotates in place.\"]}",
+      "spec": {
+        "folder": "rotationEval",
+        "label": "旋转运动",
+        "category": "移动",
+        "environment": "village",
+        "instruction": "Alpha 原地按 camera 动作旋转，Bravo 留在世界原位置；Bravo 视角保留远处村庄。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              0.0,
+              10.0,
+              0.0
+            ],
+            "yaw": 3.1416,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "village_behind",
+        "seed": 43,
+        "astra_notes": [
+          "Alpha faces Bravo across a flat grassy field; a small distant village lies behind Alpha from Bravo’s viewpoint and remains visible to Bravo while Alpha rotates in place."
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:40.701635+00:00"
+    },
+    "eval_turn_to_look": {
+      "dataset": "eval_turn_to_look",
+      "model": "gpt-6-astra",
+      "response_id": "resp_02e65a93bbd31328016ab3a865f09487d08435e7f4d80e8372",
+      "raw_text": "{\"environment\":\"savanna\",\"landmarks\":\"river_acacia\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[0,8,0],\"yaw\":3.1416,\"pitch\":0}},\"notes\":[\"稀树草原地形，两人相距约八个方块并沿河岸相向站立；共享低矮河道、金合欢树和稀疏草地。\"]}",
+      "spec": {
+        "folder": "turnToLookEval",
+        "label": "转身对视",
+        "category": "一致性",
+        "environment": "savanna",
+        "instruction": "在河流旁的稀树草原中，两人从相向的初始视角按各自 camera 动作转动，共享树木与地形。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              0.0,
+              8.0,
+              0.0
+            ],
+            "yaw": 3.1416,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "river_acacia",
+        "seed": 44,
+        "astra_notes": [
+          "稀树草原地形，两人相距约八个方块并沿河岸相向站立；共享低矮河道、金合欢树和稀疏草地。"
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:58.907243+00:00"
+    },
+    "eval_turn_to_look_opposite": {
+      "dataset": "eval_turn_to_look_opposite",
+      "model": "gpt-6-astra",
+      "response_id": "resp_086709d99653a728016ab3a868574487d1833749d9fe0a931b",
+      "raw_text": "{\"environment\":\"savanna\",\"landmarks\":\"river_acacia\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[0,8,0],\"yaw\":3.14,\"pitch\":0}},\"notes\":[\"稀树草原中两人相距约八格，Alpha与Bravo初始相向；左侧有浅河与金合欢树，便于摄像机旋转时保持共享地标一致。\"]}",
+      "spec": {
+        "folder": "turnToLookOppositeEval",
+        "label": "转身背视",
+        "category": "一致性",
+        "environment": "savanna",
+        "instruction": "在相同稀树草原中执行两人的相反转向动作；摄像机旋转时保持共享世界中的物体位置。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              0.0,
+              8.0,
+              0.0
+            ],
+            "yaw": 3.14,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "river_acacia",
+        "seed": 44,
+        "astra_notes": [
+          "稀树草原中两人相距约八格，Alpha与Bravo初始相向；左侧有浅河与金合欢树，便于摄像机旋转时保持共享地标一致。"
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:38.414053+00:00"
+    },
+    "eval_both_look_away": {
+      "dataset": "eval_both_look_away",
+      "model": "gpt-6-astra",
+      "response_id": "resp_09fb8a493d156461016ab3a87099cc87d09f5a3fb87700bab8",
+      "raw_text": "{\"environment\":\"village\",\"landmarks\":\"village_right\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[-3,8,0],\"yaw\":2.78,\"pitch\":0}},\"notes\":[\"Flat shared grassland with both players facing each other at close range.\",\"A compact low-poly village sits far to Alpha's right on the horizon, matching the visible distant buildings.\"]}",
+      "spec": {
+        "folder": "bothLookAwayEval",
+        "label": "双方移开视线",
+        "category": "记忆",
+        "environment": "village",
+        "instruction": "两人按 camera 序列移开视线并回看；人物和远处村庄固定在共享世界中。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              -3.0,
+              8.0,
+              0.0
+            ],
+            "yaw": 2.78,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "village_right",
+        "seed": 46,
+        "astra_notes": [
+          "Flat shared grassland with both players facing each other at close range.",
+          "A compact low-poly village sits far to Alpha's right on the horizon, matching the visible distant buildings."
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:23:11.302886+00:00"
+    },
+    "eval_one_looks_away": {
+      "dataset": "eval_one_looks_away",
+      "model": "gpt-6-astra",
+      "response_id": "resp_035f7cdd303bba31016ab3a8761a4087d0844fb3a67432f40e",
+      "raw_text": "{\"environment\":\"flat\",\"landmarks\":\"none\",\"initial\":{\"alpha\":{\"position\":[0,0,0],\"yaw\":0,\"pitch\":0},\"bravo\":{\"position\":[0,8,0],\"yaw\":3.1416,\"pitch\":0}},\"notes\":[\"平坦草地共享空间；Bravo位于Alpha正前方，双方初始互相注视，便于Alpha短暂移开视线后回看。\"]}",
+      "spec": {
+        "folder": "oneLooksAwayEval",
+        "label": "单方移开视线",
+        "category": "场景理解",
+        "environment": "flat",
+        "instruction": "Alpha 按 camera 序列移开视线并回看，Bravo 保持视角；人物维持在同一共享空间。",
+        "initial": {
+          "alpha": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "bravo": {
+            "position": [
+              0.0,
+              8.0,
+              0.0
+            ],
+            "yaw": 3.1416,
+            "pitch": 0.0
+          }
+        },
+        "landmarks": "none",
+        "seed": 47,
+        "astra_notes": [
+          "平坦草地共享空间；Bravo位于Alpha正前方，双方初始互相注视，便于Alpha短暂移开视线后回看。"
+        ],
+        "astra_model": "gpt-6-astra"
+      },
+      "generated_utc": "2026-09-23T10:22:54.353207+00:00"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solaris / Blender 世界对比</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="../">VIZ HUB <span>/ WORLD LAB</span></a>
+  <a href="../solaris-inference/">原 Solaris 推理结果 ↗</a>
+</header>
+<main>
+  <div class="intro"><div><p class="eyebrow">SOLARIS × BLENDER · STAGE 01</p>
+    <h1>建模后的世界，<span>与真值对照。</span></h1>
+    <p>相同的双人首帧与动作序列，构建共享三维场景。同步查看 Alpha 和 Bravo 的视角，比较物体、运动和空间关系。</p>
+  </div><div class="specs"><span><b>7</b>场景</span><span><b>257</b>帧 / 场景</span><span><b>20</b>fps</span><span><b>CPU</b>Workbench</span></div></div>
+  <div id="loading" role="status">正在加载场景…</div>
+  <div class="workspace" id="workspace" hidden>
+    <aside><p class="eyebrow">选择场景</p><nav id="scenes" aria-label="场景列表"></nav>
+      <div class="aside-note"><span class="dot"></span> 阶段 1：观察 Blender 建模<br>渲染结果尚未接入视频生成模型。</div></aside>
+    <section class="viewer">
+      <div class="scene-heading"><div><p id="scene-id" class="eyebrow"></p><h2 id="scene-title"></h2></div>
+        <div class="tabs" role="group" aria-label="显示视角"><button data-view="both" aria-pressed="true">双人</button><button data-view="alpha" aria-pressed="false">Alpha</button><button data-view="bravo" aria-pressed="false">Bravo</button></div></div>
+      <p id="instruction" class="instruction"></p>
+      <div class="column-labels"><span><i class="key gt"></i>Ground truth <small>原推理 GT</small></span><span><i class="key world"></i>Blender <small>动作驱动的三维场景</small></span></div>
+      <div id="video-grid" class="video-grid"></div>
+      <div class="transport">
+        <div class="transport-buttons"><button id="play" class="primary" aria-label="同步播放">▶ 同步播放</button><button id="previous" aria-label="上一帧">−1 帧</button><button id="next" aria-label="下一帧">+1 帧</button><button id="reset" aria-label="回到首帧">↶ 首帧</button></div>
+        <label>速度 <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+        <output id="time">0.00 s</output>
+        <label class="frame-field">帧 <input id="frame" type="number" min="1" max="257" value="1" aria-label="跳转到帧"> / 257</label>
+        <input id="scrubber" class="scrubber" type="range" min="0" max="256" step="1" value="0" aria-label="同步视频时间轴">
+      </div>
+      <p id="media-status" class="media-status" role="status"></p>
+      <div class="action-panel"><div class="panel-title"><h3>当前动作</h3><small>时间轴：A 移动 / 转向 / 放置，B 移动 / 转向 / 放置</small></div>
+        <canvas id="actions-timeline" width="1100" height="102" aria-label="双人动作时间轴"></canvas>
+        <div class="action-readout"><p><b>Alpha</b><span id="action-alpha"></span></p><p><b>Bravo</b><span id="action-bravo"></span></p></div>
+      </div>
+      <details class="panel" open><summary>建模输入 · 双人首帧</summary><div id="inputs" class="input-grid"></div>
+        <p class="note">只使用两张首帧图像与完整动作序列。初始几何、人物间距和材质由 AI 估计；真实轨迹坐标不进入建模脚本。</p></details>
+      <details class="panel"><summary>渲染关键帧 · 点击跳转</summary><div id="previews" class="preview-grid"></div></details>
+      <details class="panel" id="reference-images-panel"><summary>原页面参考 · 三帧 GT 与动作图</summary><div id="context-images" class="input-grid"></div><p class="note">这组三帧图包含后续 GT 参考画面，不作为额外建模条件。建模输入见上方双人首帧。</p></details>
+      <details class="panel" id="baseline-panel"><summary>完整对比视频与原 Solaris 结果</summary>
+        <div class="reference-grid"><figure><figcaption>GT / Blender · 上 Alpha，下 Bravo</figcaption><video id="comparison" controls preload="none" playsinline></video></figure><figure><figcaption>原 Solaris · 左 GT，右模型生成</figcaption><video id="baseline" controls preload="none" playsinline></video></figure></div>
+        <p class="note">这两个完整视频独立播放；上方四个视角共享同一条时间轴。</p></details>
+      <details class="panel"><summary>文件、规格与建模说明</summary><div id="downloads" class="downloads"></div><div id="technical" class="technical"></div></details>
+    </section>
+  </div>
+  <footer>Solaris / GPT-Blender · 首帧 → 三维建模 → 动作驱动 → 双视角渲染 <span id="build-date"></span></footer>
+</main>
+</body>
+</html>

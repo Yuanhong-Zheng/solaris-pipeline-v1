@@ -1,0 +1,44 @@
+{
+  "eval_structure": {
+    "folder": "structureEval", "label": "结构建造", "category": "建筑", "environment": "flat",
+    "instruction": "按双人动作序列移动、转动视角；Bravo 执行放置方块，方块留在共享世界中。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [-4.0, 3.2, 0], "yaw": 2.31}},
+    "landmarks": "sheep", "seed": 41
+  },
+  "eval_translation": {
+    "folder": "translationEval", "label": "平移运动", "category": "移动", "environment": "flat",
+    "instruction": "Alpha 按 left/right 动作横向平移；Bravo 保持原位，朝向与场景物体保持一致。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [0, 10, 0], "yaw": 3.141592653589793}},
+    "landmarks": "distant_animals", "seed": 42
+  },
+  "eval_rotation": {
+    "folder": "rotationEval", "label": "旋转运动", "category": "移动", "environment": "flat",
+    "instruction": "Alpha 原地按 camera 动作旋转，Bravo 留在世界原位置；Bravo 视角保留远处村庄。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [0, 11, 0], "yaw": 3.141592653589793}},
+    "landmarks": "village_behind", "seed": 43
+  },
+  "eval_turn_to_look": {
+    "folder": "turnToLookEval", "label": "转身对视", "category": "一致性", "environment": "savanna",
+    "instruction": "在河流旁的稀树草原中，两人从相向的初始视角按各自 camera 动作转动，共享树木与地形。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [0, 4, 0], "yaw": 3.141592653589793}},
+    "landmarks": "river_acacia", "seed": 44
+  },
+  "eval_turn_to_look_opposite": {
+    "folder": "turnToLookOppositeEval", "label": "转身背视", "category": "一致性", "environment": "savanna",
+    "instruction": "在相同稀树草原中执行两人的相反转向动作；摄像机旋转时保持共享世界中的物体位置。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [0, 4, 0], "yaw": 3.141592653589793}},
+    "landmarks": "river_acacia", "seed": 44
+  },
+  "eval_both_look_away": {
+    "folder": "bothLookAwayEval", "label": "双方移开视线", "category": "记忆", "environment": "flat",
+    "instruction": "两人按 camera 序列移开视线并回看；人物和远处村庄固定在共享世界中。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [-5.0, 10.0, 0], "yaw": 2.99}},
+    "landmarks": "village_right", "seed": 46
+  },
+  "eval_one_looks_away": {
+    "folder": "oneLooksAwayEval", "label": "单方移开视线", "category": "场景理解", "environment": "flat",
+    "instruction": "Alpha 按 camera 序列移开视线并回看，Bravo 保持视角；人物维持在同一共享空间。",
+    "initial": {"alpha": {"position": [0, 0, 0], "yaw": 0}, "bravo": {"position": [-1.4, 10.0, 0], "yaw": 3.002497}},
+    "landmarks": "none", "seed": 47
+  }
+}

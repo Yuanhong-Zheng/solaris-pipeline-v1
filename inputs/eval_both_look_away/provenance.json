@@ -1,0 +1,21 @@
+{
+  "eval_ids": "/ytech_m2v8_hdd/workspace/kling_mm/zhengyuanhong/solaris/src/data/eval_ids/eval_ids_eval_both_look_away.json",
+  "sample_index": 0,
+  "episode": 0,
+  "players": {
+    "alpha": {
+      "actions_source": "/ytech_m2v8_hdd/workspace/kling_mm/zhengyuanhong/solaris/datasets/eval/bothLookAwayEval/test/000000_Alpha_instance_000.json",
+      "start": 48,
+      "stop_exclusive": 305,
+      "sha256": "2173187d9134eebc6880c8c9426b820e8b6f26753c4ca67f4cba425966c926de"
+    },
+    "bravo": {
+      "actions_source": "/ytech_m2v8_hdd/workspace/kling_mm/zhengyuanhong/solaris/datasets/eval/bothLookAwayEval/test/000000_Bravo_instance_000.json",
+      "start": 48,
+      "stop_exclusive": 305,
+      "sha256": "f9c218fc3de88ad6c6449f86643f44d23d75366ecfe3a8eb2fcaf9b70c528f06"
+    }
+  },
+  "first_image_source": "first GT frame of saved inference composite",
+  "note": "Only action dictionaries and the two frame-0 images enter modeling."
+}
